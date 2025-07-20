@@ -1,6 +1,8 @@
 import os
 import argparse
 
+__author__ = "Joao Machete"
+
 def split_file(file_path, chunk_size=524288):
     """
     Splits a large file into smaller chunks of a specified size.
@@ -66,8 +68,9 @@ def main():
     """
     # --- 5. Command-Line Interface Setup ---
     parser = argparse.ArgumentParser(
-        description="Split a large file into smaller chunks.",
-        formatter_class=argparse.RawTextHelpFormatter # For better help text formatting
+        description="A command-line utility to split a large file into smaller, more manageable chunks.",
+        formatter_class=argparse.RawTextHelpFormatter, # For better help text formatting
+        epilog=f"Author: {__author__}"
     )
 
     parser.add_argument(
